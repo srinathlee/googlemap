@@ -22,27 +22,21 @@ function Map(){
    
              defaultZoom={21}
              defaultCenter={{ lat: 17.560400, lng:78.432478 }}
-            
-         >
+            >
           
           {locationData.map((each)=><Marker
            icon={{url:"https://cdn.pixabay.com/photo/2012/04/28/20/06/drive-44344_1280.png",scaledSize:new window.google.maps.Size(25,25)}} key={each.id} position={{lat:each.Latitude,lng:each.Longitude}}
            onClick={()=>{setSelect(each)}} />)}
           
-      
-      
-   {select&&
-    <InfoWindow  position={{lat:select.Latitude,lng:select.Longitude}} onCloseClick={()=>{setSelect(null)}} >
-     <div>
-      <h1 className='heading'>{select.country}</h1>
-      <img className="pothole_img" alt="pothole" src={select.img}/> 
-      </div>
-   </InfoWindow>
-   
-   }
-      
-
-         </GoogleMap>
+          {select&&
+          <InfoWindow  position={{lat:select.Latitude,lng:select.Longitude}} onCloseClick={()=>{setSelect(null)}} >
+          <div>
+          <h1 className='heading'>{select.country}</h1>
+          <img className="pothole_img" alt="pothole" src={select.img}/> 
+          </div>
+          </InfoWindow>
+          }
+          </GoogleMap>
           
           );
            }
