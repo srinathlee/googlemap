@@ -9,6 +9,7 @@ a{
     text-decoration: none;
     color:white;
     font-size: 1rem;
+    transition: all 0.5s ease;
 }
 li{
     list-style: none;
@@ -34,19 +35,25 @@ color:green;
 }
 .logo a{
     font-size: 1.5rem;
+    font-family: Verdana;
 }
 .navbar .links{
+   
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap:2rem;
 }
+.navbar .links li a{
+    font-family: Verdana;
+}
 .get-action-btn{
     padding:0.5rem 1rem;
     border-radius: 11px;
-    background-color: orange;
+    background-color: green;
     color:white;
+    font-family: Verdana;
 }
 .toggle-btn{
     color:white;
@@ -56,22 +63,38 @@ color:green;
 .get-action-btn:hover{
     color:white;
     scale:1.05;
+
 }
 .get-action-btn:active{
     scale: 1;
 }
 .drop-menue{
     display: none;
+    z-index: 1;
     position:absolute;
     right:2rem;
     top:60px;
-    background-color: rgba(225, 225, 225, 1);
+    background-color:#000;
     width:300px;
     border-radius: 5px;
     overflow:hidden;
     height: 0px;
-    transition: height 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: height 0.3s cubic-bezier(0.075, 0.82, 0.165,1);
 
+}
+.drop-menue li a{
+    font-family:Verdana;
+    scale:1;
+    transition:all 0.5s ease;
+}
+
+
+.drop-menue li a:hover {
+
+    scale:1.3;
+}
+.drop-menue li .get-action-btn:hover{
+    scale: 1.05;
 }
 .open{
     height:265px;
@@ -81,6 +104,7 @@ color:green;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .drop-menue li .get-action-btn{
     width:100%;
@@ -92,6 +116,9 @@ color:green;
 @media(max-width:900px){
     .toggle-btn{
         display: block;
+    }
+    .toggle-btn:hover{
+        cursor: pointer;
     }
     .navbar .links,.navbar .get-action-btn{
         display: none;

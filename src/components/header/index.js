@@ -15,30 +15,27 @@ const Header =()=>{
     return(
  <header>
     <div class="navbar">
-        <div class="logo"><a>logo</a></div>
-        <ul class="links">
-            <li class="link"><a href="home">home</a></li>
-            <li class="link"><a href="contact">contact</a></li>
-            <li class="link"><a href="about">about</a></li>
-            <li class="link"><a href="services">services</a></li>
+        <div className="logo"><a>logo</a></div>
+        <ul className="links">
+            <li className="link"><a href="home">home</a></li>
+            <li className="link"><a href="contact">contact</a></li>
+            <li className="link"><a href="about">about</a></li>
+            <li className="link"><a href="services">services</a></li>
         </ul>
-        <a href="#" class="get-action-btn">Add Pothole</a>
+        <a href="#" className="get-action-btn">Add Pothole</a>
         <div onClick={toggle} class="toggle-btn">
             =
         </div>
 
     </div>
-    <div class="drop-menue">
-        <ul class="links">
-            <li class="link"><a href="home">home</a></li>
-            <li class="link"><a href="contact">contact</a></li>
-            <li class="link"><a href="about">about</a></li>
-            <li class="link"><a href="services">services</a></li>
-            <li class="link"><a href="#" class="get-action-btn">Add Pothole</a></li>
+    <div className="drop-menue">
+        <ul className="links">
+            <li className="link"><a href="home">home</a></li>
+            <li className="link"><a href="contact">contact</a></li>
+            <li className="link"><a href="about">about</a></li>
+            <li className="link"><a href="services">services</a></li>
+            <li className="link"><a href="#" className="get-action-btn">Add Pothole</a></li>
         </ul>
-
-        
-
     </div>
     </header>   
     )
