@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom'
 import './index.css'
 
 const Header =()=>{
+    const navigate=useNavigate()
+
    const toggle=()=>{
     let toggle_btn=document.querySelector(".toggle-btn")
     let drop_menue=document.querySelector(".drop-menue")
@@ -22,7 +25,7 @@ const Header =()=>{
             <li className="link"><a href="about">about</a></li>
             <li className="link"><a href="services">services</a></li>
         </ul>
-        <a href="#" className="get-action-btn">Add Pothole</a>
+        <a onClick={navigate('/upload')} href="#" className="get-action-btn">Add Pothole</a>
         <div onClick={toggle} class="toggle-btn">
             =
         </div>
@@ -34,7 +37,7 @@ const Header =()=>{
             <li className="link"><a href="contact">contact</a></li>
             <li className="link"><a href="about">about</a></li>
             <li className="link"><a href="services">services</a></li>
-            <li className="link"><a href="#" className="get-action-btn">Add Pothole</a></li>
+            <li onClick={navigate('/upload')} className="link"><a  href="#" className="get-action-btn">Add Pothole</a></li>
         </ul>
     </div>
     </header>   

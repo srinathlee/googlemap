@@ -3,9 +3,10 @@ import MyMapComponent from '../myMap/map'
 import './index.css'
 
 
-const Home =()=>
-{
-    console.log(MyMapComponent)
+
+const Home =()=>{
+
+
 return(
     <div className='container'>
 
